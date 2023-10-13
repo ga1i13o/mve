@@ -103,11 +103,12 @@ load_mtl_file (std::string const& filename,
             result->insert(std::make_pair(material_name, path));
             material_name.clear();
         }
-        else
-        {
-            std::cout << "MTL Loader: Skipping unimplemented material property "
-                << line[0] << std::endl;
-        }
+        // remove this print which floods the console
+        // else
+        // {
+        //     std::cout << "MTL Loader: Skipping unimplemented material property "
+        //         << line[0] << std::endl;
+        // }
     }
 
     /* Close the file stream. */
